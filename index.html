@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Politics as Protocol – Layered Model</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #f9fafb;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+      background: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #111827;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.3rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.25rem;
+    }
+    p, li {
+      font-size: 0.95rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+    .section-number {
+      font-weight: 700;
+      margin-right: 0.3rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.25rem;
+    }
+    .summary-box {
+      background: #f9fafb;
+      border-radius: 0.5rem;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid #e5e7eb;
+      margin: 0.75rem 0 1.2rem;
+    }
+    .summary-box p {
+      margin: 0.2rem 0;
+    }
+    .compact-list li {
+      margin-bottom: 0.3rem;
+    }
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p, li {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 2rem 2rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Politics as Protocol – Layered Model</h1>
+    <p class="tagline">
+      A mobile-friendly blueprint for turning a political system into a protocol.
+    </p>
+
+    <section>
+      <span class="badge">Overview</span>
+      <p><strong>Goal:</strong> Turn a political system into a protocol that can run on-chain (or hybrid on/off-chain).</p>
+      <p>We use 9 layers:</p>
+      <ul class="compact-list">
+        <li>1. Governance domain model</li>
+        <li>2. Identity &amp; access</li>
+        <li>3. Representation &amp; delegation</li>
+        <li>4. Proposal &amp; deliberation</li>
+        <li>5. Voting protocol</li>
+        <li>6. Policy encoding &amp; enforcement</li>
+        <li>7. Constitutional &amp; oversight</li>
+        <li>8. Infrastructure</li>
+        <li>9. Security &amp; inclusivity</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">1️⃣</span>Governance Domain Model</h2>
+      <p>Defines the logical structure of the political system before touching any blockchain.</p>
+      <h3>Actors</h3>
+      <ul>
+        <li>Citizens</li>
+        <li>Permanent residents</li>
+        <li>Elected officials</li>
+        <li>Political parties</li>
+        <li>Agencies / regulators</li>
+      </ul>
+
+      <h3>Rights &amp; Roles</h3>
+      <ul>
+        <li>Who can vote</li>
+        <li>Who can run for office</li>
+        <li>Who can propose laws / budgets</li>
+        <li>Who can challenge decisions</li>
+      </ul>
+
+      <h3>Decision Types</h3>
+      <ul>
+        <li>Constitutional amendments</li>
+        <li>Ordinary laws / regulations</li>
+        <li>Budgets &amp; taxation</li>
+        <li>Appointments &amp; dismissals</li>
+        <li>Oversight / investigations</li>
+      </ul>
+
+      <h3>Resources</h3>
+      <ul>
+        <li>Treasury / public funds</li>
+        <li>Public assets</li>
+        <li>Public data / registries</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">2️⃣</span>Identity &amp; Access Layer</h2>
+      <p>Answers: <strong>“Who are you, and are you allowed to participate?”</strong></p>
+
+      <h3>Digital Citizenship ID</h3>
+      <ul>
+        <li>Hooks into national / provincial IDs</li>
+        <li>Verifiable credentials (VCs)</li>
+        <li>Proof of age, residency, citizenship</li>
+        <li>Privacy-preserving attestations</li>
+      </ul>
+
+      <h3>Authentication</h3>
+      <ul>
+        <li>Wallet keys</li>
+        <li>Government eID or app</li>
+        <li>Multi-factor (phone + hardware)</li>
+        <li>Zero-knowledge proofs for eligibility</li>
+      </ul>
+
+      <h3>Voter Registry (on-chain)</h3>
+      <ul>
+        <li>Register eligible citizens</li>
+        <li>Update / revoke status</li>
+        <li>Answer “is this person allowed to vote on X?”</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">3️⃣</span>Representation &amp; Delegation Layer</h2>
+      <p>Answers: <strong>“How does individual voice become political power?”</strong></p>
+
+      <h3>Direct Voting</h3>
+      <ul>
+        <li>One-person-one-vote (OPV)</li>
+        <li>Used for referenda and general elections</li>
+      </ul>
+
+      <h3>Delegated / Liquid Democracy</h3>
+      <ul>
+        <li>Delegate to representatives</li>
+        <li>Delegate per topic (e.g., climate, housing)</li>
+        <li>Change or revoke delegation anytime</li>
+      </ul>
+
+      <h3>Elected Offices</h3>
+      <ul>
+        <li>National, provincial, municipal representatives</li>
+        <li>Term limits</li>
+        <li>Recall / removal rules</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">4️⃣</span>Proposal &amp; Deliberation Lifecycle</h2>
+      <p>Answers: <strong>“How does an idea become a binding decision?”</strong></p>
+
+      <h3>1. Deliberation (mostly off-chain)</h3>
+      <ul>
+        <li>Public consultations</li>
+        <li>Online forums / citizen assemblies</li>
+        <li>Expert input</li>
+      </ul>
+
+      <h3>2. Formal Proposal (on-chain anchor)</h3>
+      <ul>
+        <li>Submit proposal with metadata + content hash</li>
+        <li>Tag as “budget”, “law”, “appointment”, etc.</li>
+        <li>Start mandatory review period</li>
+      </ul>
+
+      <h3>3. Amendments</h3>
+      <ul>
+        <li>Committees or citizens suggest changes</li>
+        <li>Versioning of proposals</li>
+        <li>Public comments tracked and linked</li>
+      </ul>
+
+      <h3>4. Scheduling &amp; Voting</h3>
+      <ul>
+        <li>Set voting window</li>
+        <li>Enforce eligibility and quorum rules</li>
+        <li>Apply majority / supermajority thresholds</li>
+      </ul>
+
+      <h3>5. Ratification &amp; Execution</h3>
+      <ul>
+        <li>Mark proposal as accepted / rejected</li>
+        <li>If accepted, trigger fund disbursement</li>
+        <li>Update legal text and notify institutions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">5️⃣</span>Voting Protocol Layer</h2>
+      <p>Answers: <strong>“How do we collect and count votes securely and fairly?”</strong></p>
+
+      <h3>Voting Methods</h3>
+      <ul>
+        <li>Secret ballot</li>
+        <li>First-past-the-post or alternatives (ranked, etc.)</li>
+        <li>Referenda (single or multi-round)</li>
+      </ul>
+
+      <h3>Security Properties</h3>
+      <ul>
+        <li>Anti-coercion (no proof of how you voted)</li>
+        <li>Sybil resistance (no fake identities)</li>
+        <li>End-to-end verifiability (voters can check inclusion)</li>
+        <li>Public auditability (anyone can check tallies)</li>
+      </ul>
+
+      <h3>Tallying</h3>
+      <ul>
+        <li>Encrypted ballots</li>
+        <li>Mixnets / homomorphic tally</li>
+        <li>Publish proofs of correct counting</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">6️⃣</span>Policy Encoding &amp; Enforcement Layer</h2>
+      <p>Answers: <strong>“Once we decide something, how is it actually enforced?”</strong></p>
+
+      <h3>Budget Execution</h3>
+      <ul>
+        <li>Treasury smart contracts</li>
+        <li>Multi-year schedules</li>
+        <li>Conditional releases based on milestones</li>
+      </ul>
+
+      <h3>Legislative Effects</h3>
+      <ul>
+        <li>On-chain registry of laws (hashes of legal text)</li>
+        <li>Functions to add, amend, repeal</li>
+        <li>Links from laws to responsible agencies</li>
+      </ul>
+
+      <h3>Off-chain Integration</h3>
+      <ul>
+        <li>APIs from chain to government systems</li>
+        <li>“Legal oracles” confirming enactment</li>
+        <li>Public feeds / notifications</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">7️⃣</span>Constitutional &amp; Oversight Layer</h2>
+      <p>Answers: <strong>“What are the limits, and who polices them?”</strong></p>
+
+      <h3>Machine-readable Constitution</h3>
+      <ul>
+        <li>Fundamental rights</li>
+        <li>Separation of powers</li>
+        <li>Rules about how rules can change</li>
+      </ul>
+
+      <h3>Oversight Bodies (encoded roles)</h3>
+      <ul>
+        <li>Constitutional court / committee</li>
+        <li>Ethics / integrity offices</li>
+        <li>Auditor-style modules for spending &amp; performance</li>
+      </ul>
+
+      <h3>Challenge &amp; Review</h3>
+      <ul>
+        <li>Citizens or officials can contest decisions</li>
+        <li>Veto powers with clear conditions</li>
+        <li>Emergency powers with automatic sunset clauses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">8️⃣</span>Infrastructure Layer</h2>
+      <p>Answers: <strong>“What tech stack runs this protocol?”</strong></p>
+
+      <h3>Blockchain / Ledger</h3>
+      <ul>
+        <li>L1 chain or rollup for governance state</li>
+        <li>Modules for proposals, votes, treasury, delegation</li>
+        <li>Optional privacy sidechains for voting</li>
+      </ul>
+
+      <h3>Off-chain Computing</h3>
+      <ul>
+        <li>Deliberation platforms</li>
+        <li>Data indexing &amp; analytics</li>
+        <li>Archival storage for documents</li>
+      </ul>
+
+      <h3>Clients &amp; Interfaces</h3>
+      <ul>
+        <li>Citizen wallet + voting app</li>
+        <li>Representative dashboards</li>
+        <li>Governance explorer</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-number">9️⃣</span>Security, Resilience &amp; Inclusivity Layer</h2>
+      <p>Answers: <strong>“Does this work for everyone, and can it survive attacks?”</strong></p>
+
+      <h3>Accessibility</h3>
+      <ul>
+        <li>Mobile-first UI</li>
+        <li>Low-bandwidth modes</li>
+        <li>Paper ballot integration where needed</li>
+        <li>Assisted voting options</li>
+      </ul>
+
+      <h3>Key Management</h3>
+      <ul>
+        <li>Social recovery of keys</li>
+        <li>Hardware tokens where appropriate</li>
+        <li>Safe defaults for non-technical users</li>
+      </ul>
+
+      <h3>Threat Modeling</h3>
+      <ul>
+        <li>Attacks on infrastructure (DDoS, censorship)</li>
+        <li>Attacks on process (disinformation, capture)</li>
+        <li>Clear failover / recovery procedures</li>
+      </ul>
+
+      <h3>Audits &amp; Transparency</h3>
+      <ul>
+        <li>Public logs of governance events</li>
+        <li>Independent auditors / watchers</li>
+        <li>Citizen-facing explainers for major decisions</li>
+      </ul>
+    </section>
+
+    <section class="summary-box">
+      <h3>Ultra-Compact Summary</h3>
+      <p>1. Model the system → actors, rights, decisions, resources</p>
+      <p>2. Identify people → digital ID + voter registry</p>
+      <p>3. Channel voice → direct voting + delegation + elected roles</p>
+      <p>4. Process ideas → deliberation → proposal → vote → execution</p>
+      <p>5. Secure votes → private, verifiable, sybil-resistant voting</p>
+      <p>6. Enforce outcomes → smart contracts for money + laws + rules</p>
+      <p>7. Constrain power → on-chain constitution + oversight + challenges</p>
+      <p>8. Run it → blockchain + apps + dashboards</p>
+      <p>9. Protect it → accessibility, security, audits, recovery</p>
+    </section>
+  </main>
+</body>
+</html>
