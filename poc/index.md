@@ -1,4 +1,4 @@
-# ProvinceOnChain  
+# Province On Chain  
 ### Protocol Mapping of Canadian Provincial Governments
 
 This section applies the 9-layer model to **provincial governance**, which controls the majority of citizen-facing systems: health, education, land, housing, policing, and municipalities.
@@ -49,6 +49,6 @@ Provinces naturally map well onto modular governance protocols.
 
 ## Navigation
 
-- [PoliticsAsProtocol](../pap/)
-- [CanadaOnChain](../coc/)
-- [MunicipalityOnChain](../moc/)
+- [Politics As Protocol](../pap/)
+- [Canada On Chain](../coc/)
+- [Municipality On Chain](../moc/)
