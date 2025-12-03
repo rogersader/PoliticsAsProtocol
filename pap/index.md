@@ -37,5 +37,5 @@ This model acts as the **base specification** for mapping Canada’s political s
 ## Navigation
 
 - [Back to Main Landing Page](../index.html)
-- Next: [CanadaOnChain](../CanadaOnChain/)
+- Next: [CanadaOnChain](../coc/)
 
