@@ -1,4 +1,4 @@
-# CanadaOnChain  
+# Canada On Chain  
 ### Mapping the 9-Layer Governance Model to Canada’s Federal System
 
 This section applies the **PoliticsAsProtocol** 9-layer model to the **federal government of Canada**.  
@@ -43,6 +43,6 @@ This mapping includes:
 
 ## Navigation
 
-- [PoliticsAsProtocol](../pap/)
+- [Politics As Protocol](../pap/)
 - [ProvinceOnChain](../poc/)
 - [MunicipalityOnChain](../moc/)
