@@ -1,4 +1,4 @@
-# PoliticsAsProtocol  
+# Politics As Protocol  
 ### The 9-Layer Governance Protocol Model
 
 This section defines the **foundational model** used across the entire repository.  
