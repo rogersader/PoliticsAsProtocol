@@ -1,332 +1,294 @@
-# Politics as Protocol – Canada Mapping
+# Politics as Protocol – Layered Model (Mobile Friendly)
 
-This document plugs **Canada’s real political system** into the 9-layer “politics as protocol” model.
-
-Use it as:
-- A **reference map** from real-world Canada → protocol layers  
-- A starting point for deciding **what goes on-chain vs off-chain vs hybrid**
+A compact, mobile-friendly blueprint for turning a political system into a protocol.  
+Designed to later map onto a specific country (e.g., Canada).
 
 ---
 
-## 0. Canada – High-Level Snapshot
+## 0. Overview
 
-- **System type:** Constitutional monarchy + parliamentary democracy, modelled on the UK. :contentReference[oaicite:0]{index=0}  
-- **Head of State:** King (represented in Canada by the Governor General). :contentReference[oaicite:1]{index=1}  
-- **Head of Government:** Prime Minister. :contentReference[oaicite:2]{index=2}  
-- **Three branches:** Legislative, Executive, Judicial (federal + provincial). :contentReference[oaicite:3]{index=3}  
-- **Three levels:** Federal, Provincial/Territorial, Municipal. :contentReference[oaicite:4]{index=4}  
-- **Core constitutional base:** Constitution Acts 1867–1982 + Canadian Charter of Rights and Freedoms. :contentReference[oaicite:5]{index=5}  
+**Goal:** Turn a political system into a protocol that can run on-chain (or hybrid on/off-chain).
 
----
+We use **9 layers**:
 
-## 1️⃣ Governance Domain Model (Canada)
+1. Governance domain model  
+2. Identity & access  
+3. Representation & delegation  
+4. Proposal & deliberation  
+5. Voting protocol  
+6. Policy encoding & enforcement  
+7. Constitutional & oversight  
+8. Infrastructure  
+9. Security & inclusivity  
 
-**Layer recap:** Define actors, rights, decision types, and resources before touching a chain.
-
-### Actors (Canada)
-
-**Federal level**
-
-- **Parliament (Legislative branch)**  
-  - **House of Commons** – 343 elected MPs representing electoral districts (“ridings”) as of the 2025 election. :contentReference[oaicite:6]{index=6}  
-  - **Senate** – 105 appointed Senators representing regions. :contentReference[oaicite:7]{index=7}  
-
-- **Executive branch**  
-  - King (represented by the **Governor General**)  
-  - **Prime Minister & Cabinet** (the Government) :contentReference[oaicite:8]{index=8}  
-
-- **Judicial branch**  
-  - **Supreme Court of Canada** (9 judges).  
-  - Federal courts + provincial/territorial courts beneath it. :contentReference[oaicite:9]{index=9}  
-
-**Sub-federal**
-
-- **Provincial / Territorial governments**  
-  - Legislatures (e.g., Ontario’s Legislative Assembly, Quebec’s National Assembly).  
-- **Municipal governments**  
-  - City councils, mayors – powers delegated by provinces. :contentReference[oaicite:10]{index=10}  
-
-**Constituents**
-
-- Citizens of Canada (core political rights). :contentReference[oaicite:11]{index=11}  
-- Permanent residents and others (limited rights; still important for policy input).
+Each layer below is kept short and scannable for mobile screens.
 
 ---
 
-### Rights & Roles (Canada)
+## 1️⃣ Governance Domain Model
 
-- **Democratic rights (Charter ss. 3–5)**  
-  - Right to vote and run for office in federal and provincial elections, max 5-year terms. :contentReference[oaicite:12]{index=12}  
+Defines the *logical structure* of the political system before touching any blockchain.
 
-- **Division of powers (Constitution Act, 1867, ss. 91–92)**  
-  - **Federal powers**: trade and commerce, defence, criminal law, banking, immigration, etc. :contentReference[oaicite:13]{index=13}  
-  - **Provincial powers**: property and civil rights, education, municipalities, natural resources, etc. :contentReference[oaicite:14]{index=14}  
+**Actors**
 
-- **Charter-protected rights & freedoms**  
-  - Fundamental freedoms (expression, religion, association).  
-  - Legal rights (life, liberty, security).  
-  - Equality rights, mobility rights, etc. :contentReference[oaicite:15]{index=15}  
+- Citizens  
+- Permanent residents  
+- Elected officials  
+- Political parties  
+- Agencies / regulators  
 
----
+**Rights & Roles**
 
-### Decision Types (Canada)
+- Who can vote  
+- Who can run for office  
+- Who can propose laws / budgets  
+- Who can challenge decisions  
 
-- **Constitutional amendments** – follow specific amending formulas in Constitution Act, 1982 (e.g. 7/50 rule). :contentReference[oaicite:16]{index=16}  
-- **Federal legislation** – Acts of Parliament (House + Senate + Royal Assent). :contentReference[oaicite:17]{index=17}  
-- **Provincial / territorial legislation** – Acts of provincial legislatures. :contentReference[oaicite:18]{index=18}  
-- **Regulations & orders-in-council** – Made by cabinet under delegated authority. :contentReference[oaicite:19]{index=19}  
-- **Budgets & appropriations** – Public spending authorizations at each level.  
+**Decision Types**
 
----
+- Constitutional amendments  
+- Ordinary laws / regulations  
+- Budgets & taxation  
+- Appointments & dismissals  
+- Oversight / investigations  
 
-### Resources (Canada)
+**Resources**
 
-- **Federal Consolidated Revenue Fund** – all public money at federal level.  
-- **Provincial/municipal budgets** – health, education, local services, etc. :contentReference[oaicite:20]{index=20}  
-- **Public assets & data** – lands, infrastructure, registries (health, tax, identity, land titles).
-
----
-
-## 2️⃣ Identity & Access Layer (Canada)
-
-**Layer recap:** Who you are and whether you can participate.
-
-### Current Reality
-
-- **No single nationwide digital e-ID yet** – identity is mostly physical docs (passports, driver’s licences, provincial health cards) plus some provincial digital ID pilots. :contentReference[oaicite:21]{index=21}  
-- **Elections Canada** maintains the **National Register of Electors** (federal), based on tax, driver’s licence, and other data. :contentReference[oaicite:22]{index=22}  
-- Provinces maintain their own voter lists for provincial/municipal elections.
-
-### Protocol Hooks (Canada)
-
-On-chain / hybrid candidates:
-
-- **Digital Citizenship Credential**  
-  - Bind a wallet or keypair to “federal citizen eligible to vote” via verifiable credentials, backed by Elections Canada & provinces.  
-- **Eligibility Attestations**  
-  - On-chain proofs: “over 18,” “resident of riding X,” “citizen vs PR,” without revealing identity (ZK-style).  
-- **Voter Registry Smart Contract**  
-  - Mirrors the federal + provincial registers in a privacy-preserving way for protocol-level eligibility checks.
+- Treasury / public funds  
+- Public assets  
+- Public data / registries  
 
 ---
 
-## 3️⃣ Representation & Delegation Layer (Canada)
+## 2️⃣ Identity & Access Layer
 
-**Layer recap:** How individual voice becomes political power.
+Answers: **“Who are you, and are you allowed to participate?”**
 
-### Current Canada
+**Digital Citizenship ID**
 
-- **House of Commons elections**  
-  - Canada is divided into **338–343 electoral districts (“ridings”)**; each elects one MP. :contentReference[oaicite:23]{index=23}  
-  - Voting system: **First-past-the-post (FPTP)** – candidate with most votes wins the seat. :contentReference[oaicite:24]{index=24}  
+- Hooks into national / provincial IDs  
+- Verifiable credentials (VCs)  
+- Proof of age, residency, citizenship  
+- Privacy-preserving attestations  
 
-- **Government formation**  
-  - Party with **confidence of the House** (usually most seats) forms the Government. Majority vs minority governments depend on seat counts. :contentReference[oaicite:25]{index=25}  
+**Authentication**
 
-- **Senate**  
-  - Senators appointed by the Governor General on advice of the PM; represent regions and review legislation. :contentReference[oaicite:26]{index=26}  
+- Wallet keys  
+- Government eID or app  
+- Multi-factor (phone + hardware)  
+- Zero-knowledge proofs for eligibility  
 
-- **Provinces and municipalities**  
-  - Each has its own elected legislature or council using similar FPTP-style systems. :contentReference[oaicite:27]{index=27}  
+**Voter Registry (on-chain)**
 
-### Protocol Hooks (Canada)
-
-- **On-chain representation graph**  
-  - Represent **MPs, MLAs, municipal councillors**, parties and caucuses as on-chain entities with terms, ridings, and roles.  
-- **Liquid democracy overlay (non-binding at first)**  
-  - Citizens delegate to issue-based or regional representatives on-chain, creating a **parallel legitimacy signal** to compare against FPTP outcomes.  
-- **Recall / mandate dashboards**  
-  - Track confidence/approval signals on-chain even if legal recall rules stay off-chain initially.
+- Register eligible citizens  
+- Update / revoke status  
+- Answer “is this person allowed to vote on X?”  
 
 ---
 
-## 4️⃣ Proposal & Deliberation Lifecycle (Canada)
+## 3️⃣ Representation & Delegation Layer
 
-**Layer recap:** Idea → law/budget → execution.
+Answers: **“How does individual voice become political power?”**
 
-### Current Canada
+**Direct Voting**
 
-- **Federal legislative flow** (simplified):  
-  1. Policy idea developed by cabinet / MP / committee.  
-  2. **Bill introduced** in House or Senate; multiple readings, committee study, amendments. :contentReference[oaicite:28]{index=28}  
-  3. Passed by **both Houses**, then **Royal Assent** by Governor General. :contentReference[oaicite:29]{index=29}  
-  4. Comes into force via commencement provisions or orders-in-council.
+- One-person-one-vote (OPV)  
+- Used for referenda and general elections  
 
-- **Public input**  
-  - Committee hearings, consultations, white papers, online feedback – mostly off-chain, scattered across sites and PDFs.
+**Delegated / Liquid Democracy**
 
-- **Budget cycle**  
-  - Annual federal & provincial budgets tabled by finance ministers; supply and appropriation bills must pass to authorize spending. :contentReference[oaicite:30]{index=30}  
+- Delegate to representatives  
+- Delegate per topic (e.g., climate, housing)  
+- Change or revoke delegation anytime  
 
-### Protocol Hooks (Canada)
+**Elected Offices**
 
-- **On-chain bill metadata**  
-  - Every bill / motion / regulation gets a **content hash and metadata record** (sponsor, stage, committee, links).  
-- **Deliberation links**  
-  - Public submissions, committee transcripts, and expert reports anchored via hashes; results remain in web2 / IPFS.  
-- **Formal on-chain “governance actions”**  
-  - Mirror Cardano-style governance actions: proposal types for laws, budgets, appointments that track progress through the real process.  
-- **Participatory overlays**  
-  - Non-binding civic referenda or preference signals attached to each bill or budget item.
+- National, provincial, municipal representatives  
+- Term limits  
+- Recall / removal rules  
 
 ---
 
-## 5️⃣ Voting Protocol Layer (Canada)
+## 4️⃣ Proposal & Deliberation Lifecycle
 
-**Layer recap:** Collect & count votes securely.
+Answers: **“How does an idea become a binding decision?”**
 
-### Current Canada
+**1. Deliberation (mostly off-chain)**
 
-- **Federal/provincial elections**  
-  - FPTP, one vote per elector per riding. :contentReference[oaicite:31]{index=31}  
-  - **Paper ballots, hand-counted**, overseen by Elections Canada (federal) or provincial agencies. :contentReference[oaicite:32]{index=32}  
+- Public consultations  
+- Online forums / citizen assemblies  
+- Expert input  
 
-- **Referenda / plebiscites**  
-  - Rare; ad-hoc enabling legislation (e.g., past referenda on constitutional changes or provincial matters).
+**2. Formal Proposal (on-chain anchor)**
 
-- **Security model today**  
-  - Physical chain of custody, scrutineers, recounts; not cryptographically verifiable by individual voters, but well-tested administratively.
+- Submit proposal with metadata + content hash  
+- Tag as “budget”, “law”, “appointment”, etc.  
+- Start mandatory review period  
 
-### Protocol Hooks (Canada)
+**3. Amendments**
 
-- **Parallel cryptographic referenda**  
-  - Start with **consultative on-chain votes** (no legal force) to test ZK voting, end-to-end verifiability, and anti-coercion, while paper remains official.  
-- **Per-riding governance channels**  
-  - On-chain voting instances scoped to each riding to mirror Elections Canada’s district model. :contentReference[oaicite:33]{index=33}  
-- **Public verification layer**  
-  - Publish commitment hashes for results, recounts, and tallies on-chain, even if ballots remain paper.
+- Committees or citizens suggest changes  
+- Versioning of proposals  
+- Public comments tracked and linked  
 
----
+**4. Scheduling & Voting**
 
-## 6️⃣ Policy Encoding & Enforcement Layer (Canada)
+- Set voting window  
+- Enforce eligibility and quorum rules  
+- Apply majority / supermajority thresholds  
 
-**Layer recap:** Once a decision is made, how does it bite?
+**5. Ratification & Execution**
 
-### Current Canada
-
-- **Laws & regulations**  
-  - Published in the **Canada Gazette**, Justice Laws website, and provincial equivalents. :contentReference[oaicite:34]{index=34}  
-- **Enforcement**  
-  - Carried out by departments, agencies, regulators, police, and courts.  
-- **Budgets**  
-  - Appropriations authorize departments to spend from the Consolidated Revenue Fund (federal) or provincial funds.
-
-### Protocol Hooks (Canada)
-
-- **On-chain legal registry (hash-based)**  
-  - Hash every Act, regulation, and amendment; maintain an **immutable timeline** of Canada’s legal state.  
-- **Treasury shadowing**  
-  - Represent budget lines and transfers as **on-chain commitments**, even if fiat flows remain off-chain initially.  
-- **Reg-tech integration**  
-  - Build domain-specific smart contracts where compliance can be checked automatically (e.g., open data obligations, algorithmic disclosure, etc.), while human enforcement remains off-chain.
+- Mark proposal as accepted / rejected  
+- If accepted, trigger:
+  - Fund disbursement  
+  - Legal text update  
+  - Notifications to relevant institutions  
 
 ---
 
-## 7️⃣ Constitutional & Oversight Layer (Canada)
+## 5️⃣ Voting Protocol Layer
 
-**Layer recap:** Rights, checks, and amendments.
+Answers: **“How do we collect and count votes securely and fairly?”**
 
-### Current Canada
+**Voting Methods**
 
-- **Core documents**  
-  - **Constitution Acts 1867 & 1982** define state structure + amending procedures. :contentReference[oaicite:35]{index=35}  
-  - **Canadian Charter of Rights and Freedoms** protects fundamental, democratic, legal, equality, and other rights. :contentReference[oaicite:36]{index=36}  
+- Secret ballot  
+- First-past-the-post or alternatives (ranked, etc.)  
+- Referenda (single or multi-round)  
 
-- **Judicial oversight**  
-  - **Courts (especially Supreme Court)** can strike down or interpret laws inconsistent with the Constitution/Charter. :contentReference[oaicite:37]{index=37}  
+**Security Properties**
 
-- **Notwithstanding clause (s.33)**  
-  - Allows Parliament or provincial legislatures to temporarily override certain Charter rights (ss. 2, 7–15) for up to 5 years, renewable. :contentReference[oaicite:38]{index=38}  
-  - High-profile use around Quebec’s secularism laws (Bill 21, Bill 9, etc.). :contentReference[oaicite:39]{index=39}  
+- Anti-coercion (no proof of how you voted)  
+- Sybil resistance (no fake identities)  
+- End-to-end verifiability (voters can check inclusion)  
+- Public auditability (anyone can check tallies)  
 
-- **Auditors & watchdogs**  
-  - Auditor General, parliamentary budget officer, ethics commissioner, provincial equivalents.
+**Tallying**
 
-### Protocol Hooks (Canada)
-
-- **Machine-readable “Charter layer”**  
-  - Tag on-chain proposals with which Charter sections they potentially touch; require a **rights impact analysis** hash before ratification.  
-- **On-chain record of constitutional litigation**  
-  - Track which laws are under Charter challenge, which sections invoked, and outcomes; create a live “constitutional health” dashboard.  
-- **Constitutional committee analogue**  
-  - Inspired by Cardano’s Constitutional Committee: a multi-stakeholder body (judges/academics/Indigenous reps, etc.) whose **non-binding protocol veto** flags proposals likely unconstitutional.
+- Encrypted ballots  
+- Mixnets / homomorphic tally  
+- Publish proofs of correct counting  
 
 ---
 
-## 8️⃣ Infrastructure Layer (Canada)
+## 6️⃣ Policy Encoding & Enforcement Layer
 
-**Layer recap:** Tech stack.
+Answers: **“Once we decide something, how is it actually enforced?”**
 
-### Current Canada
+**Budget Execution**
 
-- **Elections infrastructure** – web portals, paper ballots, counting systems, party databases. :contentReference[oaicite:40]{index=40}  
-- **Parliamentary systems** – LEGISinfo, Hansard, committee systems, broadcasting. :contentReference[oaicite:41]{index=41}  
-- **Court / legal publishing** – CanLII, Justice Laws, provincial e-filing. :contentReference[oaicite:42]{index=42}  
+- Treasury smart contracts  
+- Multi-year schedules  
+- Conditional releases (e.g., “if project hits milestone, release next tranche”)  
 
-### Protocol Hooks (Canada)
+**Legislative Effects**
 
-- **Governance chain / rollup**  
-  - A dedicated **governance ledger for Canada** (could be a Cardano-based sidechain or rollup) hosting:  
-    - Identities/VC anchors  
-    - Proposal records  
-    - Governance actions  
-    - Treasury/budget commitments  
+- On-chain registry of laws (hashes of legal text)  
+- Functions to add, amend, repeal  
+- Links from laws to responsible agencies  
 
-- **Bridges to institutional systems**  
-  - APIs from the chain into:  
-    - Parliamentary tracking systems  
-    - Elections Canada dashboards  
-    - Government open data portals  
+**Off-chain Integration**
 
-- **Citizen & rep clients**  
-  - Citizen app: identity, voting, delegation, explainers.  
-  - MP / MLA dashboard: link on-chain signals to real votes, committees, and constituency work.
+- APIs from chain to government systems  
+- “Legal oracles” confirming that on-chain decisions are enacted  
+- Public feeds / notifications  
 
 ---
 
-## 9️⃣ Security, Resilience & Inclusivity Layer (Canada)
+## 7️⃣ Constitutional & Oversight Layer
 
-**Layer recap:** Make it usable and robust for real people.
+Answers: **“What are the limits, and who polices them?”**
 
-### Current Canada
+**Machine-readable Constitution**
 
-- **Accessibility & inclusion**  
-  - Voting accommodations (advance polls, mail-in ballots, assistive tools). :contentReference[oaicite:43]{index=43}  
-- **Resilience**  
-  - Paper ballots as a physical audit trail; independent elections agencies; multi-party scrutineers. :contentReference[oaicite:44]{index=44}  
+- Fundamental rights  
+- Separation of powers  
+- Rules about how rules can change  
 
-### Protocol Hooks (Canada)
+**Oversight Bodies (encoded roles)**
 
-- **Mobile-first governance UX**  
-  - Build **simple, bilingual (EN/FR)** interfaces with offline-friendly modes and transparent explanations of each vote.  
-- **Key recovery and shared custody**  
-  - Integrate with government-backed recovery (e.g., in-person verification at Service Canada / provincial offices) + social recovery options.  
-- **Threat modelling at state scale**  
-  - Design for:  
-    - State-level cyberattacks  
-    - Platform capture / censorship  
-    - Disinformation surges around referenda and elections  
+- Constitutional court / committee  
+- Ethics / integrity offices  
+- Auditor-style modules for spending & performance  
 
-- **Civic transparency dashboards**  
-  - Public “governance explorers” tracking:  
-    - Bills, budgets, Charter challenges  
-    - Participation rates per riding  
-    - How well on-chain civic signals align with real votes
+**Challenge & Review**
+
+- Processes for citizens or officials to contest decisions  
+- Veto powers with clear conditions  
+- Emergency powers with automatic sunset clauses  
 
 ---
 
-## 🔍 Putting It Together – Canada as a Protocol Host
+## 8️⃣ Infrastructure Layer
 
-**Today:**  
-Canada already has a **clear separation of powers**, **three levels of government**, and a **rights-anchored constitution**. :contentReference[oaicite:45]{index=45}  
+Answers: **“What tech stack runs this protocol?”**
 
-**Protocol blueprint (minimal viable path):**
+**Blockchain / Ledger**
 
-1. Start with **Layer 8/4**: on-chain registry of bills, votes, and legal hashes + participatory overlays (consultative referenda).  
-2. Add **Layer 2/3 hooks**: digital credentials & delegation graph; keep paper elections as source of truth.  
-3. Migrate **budgets & small funds** (innovation, participatory budgeting) into on-chain treasury flows.  
-4. Finally, introduce **constitutional / Charter-aware tooling** to make rights analysis and challenges legible and auditable in real time.
+- L1 chain or rollup for governance state  
+- Modules for proposals, votes, treasury, delegation  
+- Optional privacy sidechains for voting  
 
-This way, **Canada-as-it-exists** becomes the “off-chain anchor,” and the protocol grows around it as a **governance co-processor**, not a replacement.
+**Off-chain Computing**
+
+- Deliberation platforms  
+- Data indexing & analytics  
+- Archival storage (e.g., IPFS) for documents  
+
+**Clients & Interfaces**
+
+- Citizen wallet + voting app  
+- Representative dashboards  
+- Governance explorer (like a “Parliament scan”)  
 
 ---
+
+## 9️⃣ Security, Resilience & Inclusivity Layer
+
+Answers: **“Does this work for everyone, and can it survive attacks?”**
+
+**Accessibility**
+
+- Mobile-first UI  
+- Low-bandwidth modes  
+- Paper ballot integration where needed  
+- Assisted voting options  
+
+**Key Management**
+
+- Social recovery of keys  
+- Hardware tokens where appropriate  
+- Safe defaults for non-technical users  
+
+**Threat Modeling**
+
+- Attacks on infrastructure (DDoS, censorship)  
+- Attacks on process (disinformation, capture)  
+- Clear failover / recovery procedures  
+
+**Audits & Transparency**
+
+- Public logs of governance events  
+- Independent auditors / watchers  
+- Citizen-facing “explainers” for major decisions  
+
+---
+
+## 🔍 Ultra-Compact Summary
+
+For quick reference on mobile:
+
+1. **Model the system** → actors, rights, decisions, resources  
+2. **Identify people** → digital ID + voter registry  
+3. **Channel voice** → direct voting + delegation + elected roles  
+4. **Process ideas** → deliberation → formal proposal → vote → execution  
+5. **Secure votes** → private, verifiable, sybil-resistant voting  
+6. **Enforce outcomes** → smart contracts for money + laws + rules  
+7. **Constrain power** → on-chain constitution + oversight + challenges  
+8. **Run it** → blockchain + apps + dashboards  
+9. **Protect it** → accessibility, security, audits, recovery  
+
+---
+
+_This document is the abstract model. The next step is to map a specific political system (e.g., Canada) into each layer: what stays off-chain, what moves on-chain, and what’s hybrid._
