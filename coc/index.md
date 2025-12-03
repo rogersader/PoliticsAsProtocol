@@ -43,6 +43,6 @@ This mapping includes:
 
 ## Navigation
 
-- [PoliticsAsProtocol](../PoliticsAsProtocol/)
-- [ProvinceOnChain](../ProvinceOnChain/)
-- [MunicipalityOnChain](../MunicipalityOnChain/)
+- [PoliticsAsProtocol](../pap/)
+- [ProvinceOnChain](../poc/)
+- [MunicipalityOnChain](../moc/)
