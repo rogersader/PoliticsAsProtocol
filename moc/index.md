@@ -1,4 +1,4 @@
-# MunicipalityOnChain  
+# Municipality On Chain  
 ### Cities as Protocol: Zoning, Budgets, Permitting, Representation
 
 This section maps the 9-layer governance model to **municipal government**, the most agile and innovation-ready layer of governance.
@@ -39,6 +39,6 @@ Cities are **ideal sandboxes**: smaller scale, high user engagement, and direct 
 
 ## Navigation
 
-- [PoliticsAsProtocol](../pap/)
-- [CanadaOnChain](../coc/)
-- [ProvinceOnChain](../poc/)
+- [Politics As Protocol](../pap/)
+- [Canada On Chain](../coc/)
+- [Province On Chain](../poc/)
