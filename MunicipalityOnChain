@@ -1,0 +1,317 @@
+# Politics as Protocol – Municipal Mapping (Canada Cities)
+
+Cities in Canada exist under **provincial authority**, not federal. Municipal powers come from provincial statutes (e.g., Municipal Act, City of Toronto Act, Vancouver Charter, etc.).
+
+This makes municipalities the **most flexible and innovation-ready** governance layer.
+
+---
+
+# 0. Municipal Snapshot (Canada)
+
+- Municipalities are **creatures of provincial law**; they have no constitutional status.  
+- Governed by:
+  - **City Council** (mayor + councillors)
+  - **Municipal bylaws**
+  - **City Manager / CAO + municipal departments**
+- Key domains:
+  - Land use & zoning  
+  - Policing (municipal or RCMP contract)
+  - Fire services  
+  - Transit  
+  - Water & waste  
+  - Local roads & infrastructure  
+  - Housing policy  
+  - Permits & business licensing  
+  - Parks & recreation  
+
+Municipalities are where **governance meets citizens daily**, making them ideal for protocolization.
+
+---
+
+# 1️⃣ Governance Domain Model (Municipal)
+
+## Actors (Municipal)
+- **Mayor**
+- **City Council (ward-based councillors)**
+- **City Manager / CAO**
+- **Municipal departments** (planning, transit, fire, water, housing, public works)
+- **Police boards**, **public transit authorities**, **school boards** (varies by province)
+- **Residents, businesses, property owners**
+
+## Rights & Roles
+- Right to vote in **municipal elections** (residency-based, includes permanent residents in some provinces).
+- Mayors/councillors elected for 3–4 year terms (varies by province).
+- Municipal powers from provincial acts:
+  - Zoning  
+  - Local taxation (property tax, business tax)  
+  - Public services  
+  - Local bylaws  
+  - Procurement & contracting  
+
+## Decision Types
+- **Bylaws** (zoning, noise, licensing, parking, safety)
+- **Budgets** (operating + capital)
+- **Plans** (Official Plan, Housing Strategy, Transportation Master Plan)
+- **Permits** (building, business, development)
+- **Service delivery** (transit changes, snow clearing, waste management)
+- **Appointments** (police board, committees)
+
+## Resources
+- Property tax revenue
+- Development charges & permit fees
+- Utility revenues (water, waste)
+- Municipal land & buildings
+- Transit systems
+- Infrastructure networks
+
+---
+
+# 2️⃣ Identity & Access Layer (Municipal)
+
+## Current Reality
+- Municipal elections administered by local clerks’ offices.
+- Eligibility:
+  - Resident, property owner, or tenant (varies)  
+  - Canadian citizen (for voting rights in most provinces)  
+  - Age 18+  
+- Provincial voter rolls sometimes used as the base list.
+
+## Protocol Hooks (City-Level)
+- **Municipal digital resident credential**
+  - Wallet-based proof: “resident of Ward X,” verified via property tax account, utility account, or provincial data.
+- **Property-based identity**
+  - For votes or consultations tied to property impact (zoning cases).
+- **Stakeholder credentials**
+  - Business owner  
+  - Tenant  
+  - Vehicle owner  
+  - Permit applicant
+
+- **Municipal voter registry contract**
+  - Links provincial data + local residency.
+
+---
+
+# 3️⃣ Representation & Delegation Layer (Municipal)
+
+## Current Reality
+- **Mayor** elected at-large.  
+- **Councillors** elected by ward or at-large (varies by city).
+- Elections every 3–4 years (province-dependent).
+- No political parties in many municipalities.
+
+## Protocol Hooks
+- **Ward-based representation graph**
+  - Each ward = governance namespace.
+- **Issue-specific delegation**
+  - Residents delegate their voice on:
+    - Transit  
+    - Housing  
+    - Policing  
+    - Parks  
+    - Climate  
+- **Role-weighted representation**
+  - Businesses have consultative voting on business improvement areas (BIAs).
+- **Participatory voting layer**
+  - Real-time temperature checks on council votes.
+  - Council dashboards show alignment between residents’ on-chain signals and councillor voting behavior.
+
+---
+
+# 4️⃣ Proposal & Deliberation Lifecycle (Municipal)
+
+## Current Reality
+- Public consultations (town halls, surveys)
+- Staff reports → committees → council vote
+- Official Plans and zoning bylaws undergo years of planning & consultation
+
+## Protocol Hooks
+- **On-chain bylaw registry**
+  - Every bylaw hashed and versioned.
+- **Planning proposals anchored on-chain**
+  - Development applications, zoning changes, environmental assessments.
+- **Deliberation → proposal → vote cycles**
+  - Residents submit feedback that is hashed and persistently linked.
+- **Neighbourhood or ward mini-governances**
+  - On-chain participatory planning:
+    - Bike lanes  
+    - Traffic calming  
+    - Park upgrades  
+    - Street redesigns  
+
+- **Municipal participatory budgeting**
+  - Allocate 1–5% of municipal budgets via on-chain voting.
+
+---
+
+# 5️⃣ Voting Protocol Layer (Municipal)
+
+## Current Reality
+- Paper ballots, optical scanners (Toronto, Vancouver), or mail-in options.
+- No online voting in most provinces (small towns sometimes pilot it).
+
+## Protocol Hooks
+- **On-chain consultative referenda**
+  - Boundaries:
+    - Zone change acceptance  
+    - Transit project preferences  
+    - Budget priorities  
+- **Ward-specific governance channels**
+- **On-chain ballot commitments**
+  - Hash tallies from paper votes for audit transparency.
+- **Digital referenda tied to redevelopment**
+  - Example: community votes on density bonuses or public amenity contributions.
+
+---
+
+# 6️⃣ Policy Encoding & Enforcement Layer (Municipal)
+
+## Current Reality
+- Cities enforce:
+  - Building codes (with provincial co-dominance)  
+  - Zoning  
+  - Property standards  
+  - Parking & traffic bylaws  
+  - Business licences  
+  - Waste disposal  
+  - Nuisance bylaws  
+- Municipal services delivered by departments.
+
+## Protocol Hooks
+- **Bylaw execution contracts**
+  - Track issuance, enforcement, expiry.
+- **Digital permit lifecycle**
+  - Building permits, business licences, inspections:
+    - Each step = on-chain timestamp  
+    - Transparency prevents corruption  
+- **Zoning & land-use graph**
+  - On-chain land parcel records (hashes tied to land registries)
+  - Proposed changes + public comments clearly visible.
+- **Budget execution commitments**
+  - Track infrastructure projects (roads, water, parks) on-chain:
+    - Budgets  
+    - Contractors  
+    - Milestones  
+    - Delivery timelines  
+
+---
+
+# 7️⃣ Constitutional & Oversight Layer (Municipal)
+
+## Current Reality
+- No constitutional status; oversight comes from provinces.
+- Municipalities bound by:
+  - Provincial statutes (Municipal Act, City charters)
+  - Canadian Charter of Rights & Freedoms
+  - Provincial human rights codes
+- Local watchdogs:
+  - Integrity commissioner  
+  - Auditor General (some cities)  
+  - Ombudsman (city or provincial)  
+  - Police board oversight  
+
+## Protocol Hooks
+- **On-chain legality checks**
+  - Bylaws tagged for consistency with:
+    - Provincial enabling statutes  
+    - Charter rights  
+    - Human rights codes  
+- **Automatic expiry monitoring**
+  - Sunset clauses for bylaws and emergency orders.
+- **Oversight dashboard**
+  - Shows:
+    - Budget deviations  
+    - Procurement irregularities  
+    - Integrity commissioner investigations  
+- **Delegated “constitutional committee”**
+  - Non-binding rights advisory group (legal experts, Indigenous reps, community advocates).
+
+---
+
+# 8️⃣ Infrastructure Layer (Municipal)
+
+## Current Reality
+- Highly fragmented IT across:
+  - Permitting software  
+  - Finance systems  
+  - GIS systems  
+  - Policing systems  
+  - Transit  
+- Open Data portals exist in many large cities.
+
+## Protocol Hooks
+- **Municipal governance ledger**
+  - City-specific chain or rollup (Cardano-based or modular).
+- **Interoperability**
+  - Interfaces to:
+    - GIS  
+    - Permitting  
+    - Property tax  
+    - 311 systems  
+    - Open Data  
+- **Modular wallets**
+  - Resident wallet:
+    - ID (residency, property)  
+    - Votes  
+    - Delegations  
+    - Permit status  
+    - Public notices  
+
+- **Ward nodes**
+  - Universities, libraries, community centres host local validator nodes for decentralization.
+
+---
+
+# 9️⃣ Security, Resilience & Inclusivity Layer (Municipal)
+
+## Current Reality
+- Municipalities handle:
+  - Emergency services  
+  - Resilience planning  
+  - Local communications  
+  - Digital inclusion initiatives  
+
+## Protocol Hooks
+- **Offline-first participation**
+  - Kiosks in libraries, community centres.
+- **Language accessibility**
+  - EN + FR + local languages:
+    - Indigenous languages in many northern or prairie communities  
+    - Multicultural cities may require >10 languages  
+- **Disaster governance modes**
+  - Auto-shift to emergency council powers with:
+    - Limit counters  
+    - Logged justifications  
+    - Mandatory post-emergency review  
+- **Transparent procurement**
+  - Post-rfp bids, awards, change logs anchored on-chain to prevent corruption.
+
+---
+
+# 🔍 TL;DR – City as Protocol
+
+Cities are the **fastest to adopt on-chain governance** because:
+
+- They control highly visible daily services.
+- They have clearer lines of accountability (mayor + councillors).
+- Citizen engagement is far higher on local issues.
+- They can pilot protocol governance **without constitutional amendment**.
+- They can integrate:
+  - Permits  
+  - Zoning  
+  - Budgets  
+  - Planning  
+  - Public consultations  
+  directly into an on-chain lifecycle.
+
+**Minimal viable path for municipalities:**
+1. On-chain bylaw & permit hashing.  
+2. Digital municipal ID (residency-based).  
+3. Ward-based consultation channels.  
+4. Participatory budgeting.  
+5. Zoning applications + public comments anchored on-chain.  
+6. Transparency dashboards for procurement, police boards, and budgets.
+
+This becomes a **full governance co-processor for cities**—augmenting democracy and transparency with zero disruption to constitutional order.
+
+---
