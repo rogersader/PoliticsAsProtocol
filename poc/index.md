@@ -49,6 +49,6 @@ Provinces naturally map well onto modular governance protocols.
 
 ## Navigation
 
-- [PoliticsAsProtocol](../PoliticsAsProtocol/)
-- [CanadaOnChain](../CanadaOnChain/)
-- [MunicipalityOnChain](../MunicipalityOnChain/)
+- [PoliticsAsProtocol](../pap/)
+- [CanadaOnChain](../coc/)
+- [MunicipalityOnChain](../moc/)
