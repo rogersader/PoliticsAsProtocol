@@ -39,6 +39,6 @@ Cities are **ideal sandboxes**: smaller scale, high user engagement, and direct 
 
 ## Navigation
 
-- [PoliticsAsProtocol](../PoliticsAsProtocol/)
-- [CanadaOnChain](../CanadaOnChain/)
-- [ProvinceOnChain](../ProvinceOnChain/)
+- [PoliticsAsProtocol](../pap/)
+- [CanadaOnChain](../coc/)
+- [ProvinceOnChain](../poc/)
