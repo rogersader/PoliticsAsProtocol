@@ -44,5 +44,5 @@ This mapping includes:
 ## Navigation
 
 - [Politics As Protocol](../pap/)
-- [ProvinceOnChain](../poc/)
-- [MunicipalityOnChain](../moc/)
+- [Province On Chain](../poc/)
+- [Municipality On Chain](../moc/)
