@@ -1,294 +1,148 @@
-# Politics as Protocol – Layered Model
+Politics as Protocol – Overview
 
-A compact blueprint for turning a political system into a protocol.  
-Designed to later map onto a specific country (e.g., Canada).
+This repository explores how governance systems can be modeled and executed as protocols, and applies that framework to Canada’s political structure at the federal, provincial, and municipal levels.
 
----
+The goal is to treat politics the same way we treat distributed systems:
+actors, rights, decisions, processes, and safeguards expressed as formal, composable layers that can run on-chain or hybrid on/off-chain.
 
-## 0. Overview
+The repo contains:
 
-**Goal:** Turn a political system into a protocol that can run on-chain (or hybrid on/off-chain).
+1. The Base Governance Protocol Model (9 Layers)
 
-We use **9 layers**:
+A reusable framework describing how any political system can be represented as a protocol:
 
-1. Governance domain model  
-2. Identity & access  
-3. Representation & delegation  
-4. Proposal & deliberation  
-5. Voting protocol  
-6. Policy encoding & enforcement  
-7. Constitutional & oversight  
-8. Infrastructure  
-9. Security & inclusivity  
+Governance Domain Model – actors, rights, decision types, resources
 
-Each layer below is kept short and scannable for mobile screens.
+Identity & Access – digital credentials, eligibility proofs
 
----
+Representation & Delegation – direct voting, liquid democracy, elected roles
 
-## 1️⃣ Governance Domain Model
+Proposal & Deliberation – idea → proposal → review → vote → execution
 
-Defines the *logical structure* of the political system before touching any blockchain.
+Voting Protocol – privacy, verifiability, tallying
 
-**Actors**
+Policy Encoding & Enforcement – laws, budgets, regulations, treasury
 
-- Citizens  
-- Permanent residents  
-- Elected officials  
-- Political parties  
-- Agencies / regulators  
+Constitutional & Oversight – rights analysis, vetoes, watchdogs
 
-**Rights & Roles**
+Infrastructure – blockchain layer, clients, interoperability
 
-- Who can vote  
-- Who can run for office  
-- Who can propose laws / budgets  
-- Who can challenge decisions  
+Security & Inclusivity – accessibility, recovery, threat modeling
 
-**Decision Types**
+This is the conceptual foundation for everything else in the repo.
 
-- Constitutional amendments  
-- Ordinary laws / regulations  
-- Budgets & taxation  
-- Appointments & dismissals  
-- Oversight / investigations  
+2. Canada – Federal Mapping
 
-**Resources**
+A concise mapping of the 9-layer model to Canada’s federal institutions, covering:
 
-- Treasury / public funds  
-- Public assets  
-- Public data / registries  
+Parliament (House of Commons, Senate)
 
----
+Prime Minister, Cabinet, Governor General
 
-## 2️⃣ Identity & Access Layer
+Federal courts & the Charter
 
-Answers: **“Who are you, and are you allowed to participate?”**
+Elections Canada, ridings, FPTP
 
-**Digital Citizenship ID**
+Federal powers (ss.91–92), budgets, laws, regulations
 
-- Hooks into national / provincial IDs  
-- Verifiable credentials (VCs)  
-- Proof of age, residency, citizenship  
-- Privacy-preserving attestations  
+Opportunities for on-chain layers:
 
-**Authentication**
+Bill & regulation hashing
 
-- Wallet keys  
-- Government eID or app  
-- Multi-factor (phone + hardware)  
-- Zero-knowledge proofs for eligibility  
+Digital credentials for voters
 
-**Voter Registry (on-chain)**
+Delegation graphs
 
-- Register eligible citizens  
-- Update / revoke status  
-- Answer “is this person allowed to vote on X?”  
+Non-binding referenda
 
----
+Treasury visualization
 
-## 3️⃣ Representation & Delegation Layer
+Charter-alignment tagging
 
-Answers: **“How does individual voice become political power?”**
+Shows how the protocol model fits the federal governance architecture.
 
-**Direct Voting**
+3. Provincial Mapping
 
-- One-person-one-vote (OPV)  
-- Used for referenda and general elections  
+Applies the same protocol layers to provincial governments, which control most high-touch services:
 
-**Delegated / Liquid Democracy**
+Provincial legislatures, Premiers, Cabinets, Lieutenant Governors
 
-- Delegate to representatives  
-- Delegate per topic (e.g., climate, housing)  
-- Change or revoke delegation anytime  
+Health, education, natural resources, policing, housing
 
-**Elected Offices**
+Provincial courts and human rights codes
 
-- National, provincial, municipal representatives  
-- Term limits  
-- Recall / removal rules  
+Riding-based elections (MLAs, MPPs, MNAs)
 
----
+Municipal oversight via provincial statutes
 
-## 4️⃣ Proposal & Deliberation Lifecycle
+On-chain opportunities:
 
-Answers: **“How does an idea become a binding decision?”**
+Provincial registries (health, land, business)
 
-**1. Deliberation (mostly off-chain)**
+Planning & development feedback cycles
 
-- Public consultations  
-- Online forums / citizen assemblies  
-- Expert input  
+Provincial participatory budgeting
 
-**2. Formal Proposal (on-chain anchor)**
+Rights-impact scoring + s.33 monitoring
 
-- Submit proposal with metadata + content hash  
-- Tag as “budget”, “law”, “appointment”, etc.  
-- Start mandatory review period  
+Governance dashboards for ministries and agencies
 
-**3. Amendments**
+Provincial governments emerge as ideal mid-scale protocolization targets.
 
-- Committees or citizens suggest changes  
-- Versioning of proposals  
-- Public comments tracked and linked  
+4. Municipal (City) Mapping
 
-**4. Scheduling & Voting**
+The most flexible and innovation-ready layer:
 
-- Set voting window  
-- Enforce eligibility and quorum rules  
-- Apply majority / supermajority thresholds  
+Mayors, councillors, ward systems
 
-**5. Ratification & Execution**
+Bylaws, zoning, permits, local planning
 
-- Mark proposal as accepted / rejected  
-- If accepted, trigger:
-  - Fund disbursement  
-  - Legal text update  
-  - Notifications to relevant institutions  
+Infrastructure, transit, water, waste, emergency services
 
----
+Public consultations and community planning
 
-## 5️⃣ Voting Protocol Layer
+On-chain opportunities:
 
-Answers: **“How do we collect and count votes securely and fairly?”**
+Bylaw / zoning registry
 
-**Voting Methods**
+Digital municipal ID (residency-based)
 
-- Secret ballot  
-- First-past-the-post or alternatives (ranked, etc.)  
-- Referenda (single or multi-round)  
+Ward governance channels
 
-**Security Properties**
+Participatory budgeting
 
-- Anti-coercion (no proof of how you voted)  
-- Sybil resistance (no fake identities)  
-- End-to-end verifiability (voters can check inclusion)  
-- Public auditability (anyone can check tallies)  
+Permit lifecycle transparency
 
-**Tallying**
+Procurement auditing
 
-- Encrypted ballots  
-- Mixnets / homomorphic tally  
-- Publish proofs of correct counting  
+Neighbourhood-level governance modules
 
----
+Cities become natural sandboxes for real-world protocol governance pilots.
 
-## 6️⃣ Policy Encoding & Enforcement Layer
+5. What This Repository Provides
 
-Answers: **“Once we decide something, how is it actually enforced?”**
+A unified conceptual framework for turning governance into protocol logic
 
-**Budget Execution**
+Three full government layer mappings (federal, provincial, municipal)
 
-- Treasury smart contracts  
-- Multi-year schedules  
-- Conditional releases (e.g., “if project hits milestone, release next tranche”)  
+Clear separation of:
 
-**Legislative Effects**
+What can go on-chain now
 
-- On-chain registry of laws (hashes of legal text)  
-- Functions to add, amend, repeal  
-- Links from laws to responsible agencies  
+What must remain off-chain
 
-**Off-chain Integration**
+What can be hybridized
 
-- APIs from chain to government systems  
-- “Legal oracles” confirming that on-chain decisions are enacted  
-- Public feeds / notifications  
+A starting point for building:
 
----
+Digital governance apps
 
-## 7️⃣ Constitutional & Oversight Layer
+Civic identity systems
 
-Answers: **“What are the limits, and who polices them?”**
+Participatory budgeting tools
 
-**Machine-readable Constitution**
+On-chain legislative tracking
 
-- Fundamental rights  
-- Separation of powers  
-- Rules about how rules can change  
+Rights-aware governance engines
 
-**Oversight Bodies (encoded roles)**
-
-- Constitutional court / committee  
-- Ethics / integrity offices  
-- Auditor-style modules for spending & performance  
-
-**Challenge & Review**
-
-- Processes for citizens or officials to contest decisions  
-- Veto powers with clear conditions  
-- Emergency powers with automatic sunset clauses  
-
----
-
-## 8️⃣ Infrastructure Layer
-
-Answers: **“What tech stack runs this protocol?”**
-
-**Blockchain / Ledger**
-
-- L1 chain or rollup for governance state  
-- Modules for proposals, votes, treasury, delegation  
-- Optional privacy sidechains for voting  
-
-**Off-chain Computing**
-
-- Deliberation platforms  
-- Data indexing & analytics  
-- Archival storage (e.g., IPFS) for documents  
-
-**Clients & Interfaces**
-
-- Citizen wallet + voting app  
-- Representative dashboards  
-- Governance explorer (like a “Parliament scan”)  
-
----
-
-## 9️⃣ Security, Resilience & Inclusivity Layer
-
-Answers: **“Does this work for everyone, and can it survive attacks?”**
-
-**Accessibility**
-
-- Mobile-first UI  
-- Low-bandwidth modes  
-- Paper ballot integration where needed  
-- Assisted voting options  
-
-**Key Management**
-
-- Social recovery of keys  
-- Hardware tokens where appropriate  
-- Safe defaults for non-technical users  
-
-**Threat Modeling**
-
-- Attacks on infrastructure (DDoS, censorship)  
-- Attacks on process (disinformation, capture)  
-- Clear failover / recovery procedures  
-
-**Audits & Transparency**
-
-- Public logs of governance events  
-- Independent auditors / watchers  
-- Citizen-facing “explainers” for major decisions  
-
----
-
-## 🔍 Ultra-Compact Summary
-
-For quick reference on mobile:
-
-1. **Model the system** → actors, rights, decisions, resources  
-2. **Identify people** → digital ID + voter registry  
-3. **Channel voice** → direct voting + delegation + elected roles  
-4. **Process ideas** → deliberation → formal proposal → vote → execution  
-5. **Secure votes** → private, verifiable, sybil-resistant voting  
-6. **Enforce outcomes** → smart contracts for money + laws + rules  
-7. **Constrain power** → on-chain constitution + oversight + challenges  
-8. **Run it** → blockchain + apps + dashboards  
-9. **Protect it** → accessibility, security, audits, recovery  
-
----
-
-_This document is the abstract model. The next step is to map a specific political system (e.g., Canada) into each layer: what stays off-chain, what moves on-chain, and what’s hybrid._
+Protocolized city governance
