@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Politics as Protocol – Canada</title>
+  <title>Politics as Protocol – Canada Governance Stack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
@@ -10,17 +10,14 @@
   />
   <style>
     :root {
-      --bg: #0b1120;
-      --bg-alt: #020617;
-      --fg: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.12);
-      --border: #1f2937;
-      --card-bg: #020617;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.7);
-      --radius-lg: 18px;
-      --radius-xl: 24px;
+      --bg: #f9fafb;
+      --bg-alt: #ffffff;
+      --fg: #111827;
+      --muted: #4b5563;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --radius: 10px;
     }
 
     * {
@@ -30,9 +27,8 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
       color: var(--fg);
       -webkit-font-smoothing: antialiased;
     }
@@ -46,788 +42,608 @@
       text-decoration: underline;
     }
 
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem;
-    }
-
     header {
-      padding: 1.25rem 1rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: #ffffffcc;
+      backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 10;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.95),
-        rgba(15, 23, 42, 0.7),
-        transparent
-      );
-      border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
     }
 
     .brand {
       display: flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
-
-    .brand-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #38bdf8, #6366f1);
-      position: relative;
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.8),
-        0 0 22px rgba(56, 189, 248, 0.75);
-    }
-
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      inset: 7px;
-      border-radius: inherit;
-      border: 2px solid rgba(15, 23, 42, 0.85);
-    }
-
-    .brand-text {
-      display: flex;
       flex-direction: column;
-      font-size: 0.85rem;
-      line-height: 1.2;
     }
 
-    .brand-text span:first-child {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      font-size: 0.7rem;
-    }
-
-    .brand-text span:last-child {
+    .brand-title {
       font-weight: 600;
-      color: #f9fafb;
+      font-size: 0.95rem;
     }
 
-    .top-links a {
+    .brand-subtitle {
       font-size: 0.8rem;
       color: var(--muted);
-      padding: 0.3rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.85);
-      background: rgba(15, 23, 42, 0.9);
-      text-decoration: none;
     }
 
-    .top-links a:hover {
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .nav-links a {
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .nav-links a:hover {
       border-color: var(--accent);
-      color: var(--accent);
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2.5rem;
     }
 
     .hero {
-      margin-top: 1.5rem;
-      margin-bottom: 2rem;
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
       gap: 1.5rem;
-      align-items: center;
+      margin-bottom: 2rem;
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 800px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
     }
 
     .hero-main {
-      padding: 1.75rem 1.5rem;
-      background: radial-gradient(circle at top left, #0f172a, #020617);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
+      padding: 1.25rem 1.2rem;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
     }
 
-    .hero-main::before {
-      content: "";
-      position: absolute;
-      inset: -40px;
-      background: radial-gradient(
-        circle at 0 0,
-        rgba(56, 189, 248, 0.12),
-        transparent 60%
-      );
-      pointer-events: none;
-      opacity: 0.8;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.2rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      color: var(--muted);
+    .hero-tag {
       font-size: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 3.4vw, 2.4rem);
-      margin: 0 0 0.65rem;
-      letter-spacing: -0.03em;
-      color: #f9fafb;
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      margin: 0 0 0.5rem;
     }
 
     .hero-subtitle {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: var(--muted);
-      max-width: 36rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.9rem;
     }
 
     .hero-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1.25rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-meta span {
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
       margin-bottom: 0.5rem;
     }
 
-    .btn-primary {
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 999px;
-      padding: 0.55rem 1.15rem;
-      border: 1px solid rgba(56, 189, 248, 0.9);
-      background: radial-gradient(circle at top left, #38bdf8, #0ea5e9);
-      color: #0b1120;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.7);
+      padding: 0.45rem 0.95rem;
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
     }
 
     .btn-primary:hover {
-      filter: brightness(1.05);
+      background: #1d4ed8;
+      border-color: #1d4ed8;
       text-decoration: none;
     }
 
-    .btn-ghost {
-      border-radius: 999px;
-      padding: 0.55rem 1.15rem;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.95);
+    .btn-secondary {
+      background: #ffffff;
       color: var(--muted);
-      font-size: 0.9rem;
-      text-decoration: none;
+      border-color: var(--border);
     }
 
-    .btn-ghost:hover {
+    .btn-secondary:hover {
       border-color: var(--accent);
       color: var(--accent);
       text-decoration: none;
     }
 
-    .hero-footnote {
-      font-size: 0.78rem;
+    .hero-note {
+      font-size: 0.8rem;
       color: var(--muted);
-      margin-top: 0.75rem;
     }
 
     .hero-visual {
-      padding: 1.25rem 1rem;
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      background: radial-gradient(circle at top, #020617, #020617 50%, #000 100%);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
+      padding: 1.1rem 1rem;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
     }
 
     .hero-visual-title {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .diagram-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .diagram-pill {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--muted);
-    }
-
-    .diagram-box {
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      background: radial-gradient(circle at top, #020617, #020617 70%, #000 100%);
-      padding: 0.9rem 0.85rem;
       font-size: 0.8rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .diagram-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 2.2fr);
-      gap: 0.6rem;
-    }
-
-    .diagram-col-label {
-      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--muted);
       margin-bottom: 0.5rem;
     }
 
-    .diagram-stack {
+    .stack-box {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .stack-columns {
       display: grid;
-      gap: 0.3rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+      gap: 0.75rem;
     }
 
-    .diagram-layer {
-      padding: 0.28rem 0.45rem;
-      border-radius: 8px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.96);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.4rem;
-      white-space: nowrap;
+    @media (max-width: 640px) {
+      .stack-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
-    .diagram-layer-label {
+    .stack-label {
       font-size: 0.75rem;
-    }
-
-    .diagram-layer-tag {
-      font-size: 0.65rem;
-      padding: 0.1rem 0.35rem;
-      border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       color: var(--muted);
+      margin-bottom: 0.4rem;
     }
 
-    .diagram-legend {
-      margin-top: 0.5rem;
+    .stack-list {
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .stack-item {
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .stack-item-label {
+      font-size: 0.78rem;
+    }
+
+    .stack-item-tag {
       font-size: 0.7rem;
       color: var(--muted);
     }
 
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+    .stack-caption {
+      margin-top: 0.6rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    section {
+      margin-bottom: 1.9rem;
     }
 
     .section-title {
       font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.02em;
-      color: #e5e7eb;
+      margin: 0 0 0.3rem;
     }
 
     .section-subtitle {
       font-size: 0.9rem;
       color: var(--muted);
-      margin-bottom: 0.9rem;
+      margin: 0 0 0.9rem;
       max-width: 40rem;
     }
 
-    .grid {
+    .card-grid {
       display: grid;
-      gap: 1rem;
+      gap: 0.9rem;
     }
 
-    @media (min-width: 820px) {
-      .grid-3 {
+    @media (min-width: 800px) {
+      .card-grid.cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
-      .grid-2 {
+      .card-grid.cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 819px) {
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
     .card {
-      border-radius: var(--radius-lg);
+      background: var(--bg-alt);
+      border-radius: var(--radius);
       border: 1px solid var(--border);
-      background: radial-gradient(circle at top left, #020617, #020617 55%, #020617);
-      padding: 1rem 0.95rem;
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.7);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-heading {
-      font-size: 0.98rem;
-      margin-bottom: 0.2rem;
-      color: #f9fafb;
+      padding: 0.9rem 0.9rem 0.8rem;
+      font-size: 0.88rem;
     }
 
     .card-tag {
-      display: inline-block;
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--muted);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
     }
 
     .card-body {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .card-link {
       font-size: 0.8rem;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .card-link:hover {
-      text-decoration: underline;
     }
 
     .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.3rem;
-      margin-top: 0.4rem;
+      margin-top: 0.3rem;
     }
 
     .chip {
       font-size: 0.7rem;
-      padding: 0.15rem 0.4rem;
+      padding: 0.12rem 0.4rem;
       border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.96);
-    }
-
-    .diagram-card {
-      border-radius: var(--radius-lg);
       border: 1px solid var(--border);
-      background: radial-gradient(circle at top, #020617, #020617 60%, #000);
-      padding: 0.85rem 0.85rem 0.9rem;
-      font-size: 0.8rem;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.7);
+      background: var(--accent-soft);
+      color: #1d4ed8;
     }
 
-    .diagram-card h3 {
+    .placeholder {
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      padding: 0.8rem;
       font-size: 0.8rem;
-      margin: 0 0 0.25rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
       color: var(--muted);
-    }
-
-    .diagram-caption {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.4rem;
+      text-align: center;
+      background: #f3f4f6;
     }
 
     footer {
-      margin-top: 2.5rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      font-size: 0.78rem;
+      border-top: 1px solid var(--border);
+      padding: 0.9rem 1rem 1.2rem;
+      font-size: 0.8rem;
       color: var(--muted);
+      max-width: 960px;
+      margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
       justify-content: space-between;
-      align-items: center;
+      gap: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <div class="brand-mark"></div>
-      <div class="brand-text">
-        <span>Politics as Protocol</span>
-        <span>Canada Governance Stack</span>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-title">Politics as Protocol – Canada</span>
+        <span class="brand-subtitle">Mapping institutions into a 9-layer governance model</span>
       </div>
-    </div>
-    <div class="top-links">
-      <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME">
-        View on GitHub
-      </a>
+      <nav class="nav-links">
+        <a href="#layers">9-layer model</a>
+        <a href="#mappings">Canada mappings</a>
+        <a href="#visuals">Visuals</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
     </div>
   </header>
 
-  <div class="page">
+  <main>
     <section class="hero">
       <div class="hero-main">
-        <div class="hero-pill">
-          <span class="hero-pill-dot"></span>
-          <span>Protocolizing governance · Canada</span>
-        </div>
+        <div class="hero-tag">Overview</div>
         <h1>Turning Canada’s governance into a protocol stack.</h1>
         <p class="hero-subtitle">
-          This repo models politics as a layered protocol and maps it onto
-          Canada’s federal, provincial, and municipal systems. Think of it as
-          a governance architecture diagram you can eventually compile to code.
+          This repository treats politics like a distributed system: actors, rules,
+          decisions, and safeguards expressed as a layered, composable protocol
+          that can run on-chain or hybrid.
         </p>
-
-        <div class="hero-meta">
-          <span>9-layer governance model</span>
-          <span>Federal · Provincial · Municipal</span>
-          <span>On-chain / hybrid design</span>
+        <p class="hero-meta">
+          Inside: a reusable 9-layer governance model, plus concrete mappings for
+          Canada’s federal, provincial, and municipal systems.
+        </p>
+        <div class="hero-buttons">
+          <a href="#layers" class="btn-primary">Start with the 9 layers</a>
+          <a href="#mappings" class="btn-secondary">Jump to Canada mappings</a>
         </div>
-
-        <div class="hero-actions">
-          <a href="#layers" class="btn-primary">Explore the 9 layers</a>
-          <a href="#mappings" class="btn-ghost">See Canada mappings</a>
-        </div>
-        <div class="hero-footnote">
-          Built for protocol designers, civic hackers, and governance engineers.
-        </div>
+        <p class="hero-note">
+          Designed for protocol designers, civic hackers, researchers, and anyone
+          thinking about “politics as code.”
+        </p>
       </div>
 
       <div class="hero-visual">
-        <div class="hero-visual-title">Stack Diagram · High Level</div>
-        <div class="diagram-pill-row">
-          <span class="diagram-pill">Identity</span>
-          <span class="diagram-pill">Representation</span>
-          <span class="diagram-pill">Decision Flow</span>
-          <span class="diagram-pill">Rights &amp; Oversight</span>
-        </div>
-        <div class="diagram-box">
-          <div class="diagram-grid">
+        <div class="hero-visual-title">High-level stack</div>
+        <div class="stack-box">
+          <div class="stack-columns">
             <div>
-              <div class="diagram-col-label">Governance Layers</div>
-              <div class="diagram-stack">
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">9 · Security &amp; Inclusivity</span>
-                  <span class="diagram-layer-tag">Resilience</span>
+              <div class="stack-label">Protocol layers</div>
+              <div class="stack-list">
+                <div class="stack-item">
+                  <span class="stack-item-label">1–3 · Actors &amp; Identity</span>
+                  <span class="stack-item-tag">Who</span>
                 </div>
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">7–8 · Constitution &amp; Infra</span>
-                  <span class="diagram-layer-tag">Courts · Chain</span>
+                <div class="stack-item">
+                  <span class="stack-item-label">4–6 · Decisions &amp; Policy</span>
+                  <span class="stack-item-tag">How</span>
                 </div>
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">4–6 · Decisions → Policy</span>
-                  <span class="diagram-layer-tag">Votes → Laws</span>
-                </div>
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">1–3 · Actors &amp; Identity</span>
-                  <span class="diagram-layer-tag">People · Roles</span>
+                <div class="stack-item">
+                  <span class="stack-item-label">7–9 · Rights, Infra, Resilience</span>
+                  <span class="stack-item-tag">Constraints</span>
                 </div>
               </div>
             </div>
             <div>
-              <div class="diagram-col-label">Canadian Mapping</div>
-              <div class="diagram-stack">
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">Charter · Courts · Watchdogs</span>
-                  <span class="diagram-layer-tag">Rights</span>
+              <div class="stack-label">Canadian mapping</div>
+              <div class="stack-list">
+                <div class="stack-item">
+                  <span class="stack-item-label">People, parties, institutions</span>
+                  <span class="stack-item-tag">Layers 1–3</span>
                 </div>
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">Parliaments · Legislatures · Councils</span>
-                  <span class="diagram-layer-tag">Decision</span>
+                <div class="stack-item">
+                  <span class="stack-item-label">Elections, laws, budgets</span>
+                  <span class="stack-item-tag">Layers 4–6</span>
                 </div>
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">Elections · RIDINGS · ID</span>
-                  <span class="diagram-layer-tag">Identity</span>
-                </div>
-                <div class="diagram-layer">
-                  <span class="diagram-layer-label">Services · Budgets · Bylaws</span>
-                  <span class="diagram-layer-tag">Execution</span>
+                <div class="stack-item">
+                  <span class="stack-item-label">Charter, courts, services</span>
+                  <span class="stack-item-tag">Layers 7–9</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="diagram-legend">
-            Conceptual visualization only. Detailed mappings live in the
-            dedicated docs for each level of government.
+          <p class="stack-caption">
+            The details live in separate markdown files. This page is just the
+            landing map.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="layers">
+      <h2 class="section-title">1. Base governance protocol model (9 layers)</h2>
+      <p class="section-subtitle">
+        A generic framework for expressing any political system as a protocol. It
+        defines who participates, how decisions are made, how resources move, and
+        how rights are enforced.
+      </p>
+
+      <div class="card-grid cols-3">
+        <div class="card">
+          <div class="card-tag">Layers 1–3</div>
+          <div class="card-title">Governance domain, identity, representation</div>
+          <p class="card-body">
+            Define actors, rights, and roles; attach digital identities; and wire
+            them into direct voting and delegated representation (e.g., liquid
+            democracy).
+          </p>
+          <div class="chip-row">
+            <span class="chip">Actors &amp; roles</span>
+            <span class="chip">Digital credentials</span>
+            <span class="chip">Delegation graphs</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Layers 4–6</div>
+          <div class="card-title">Proposals, voting, and policy execution</div>
+          <p class="card-body">
+            Model the lifecycle from idea to binding decision, and connect outcomes
+            to laws, budgets, and program execution using on-chain or hybrid
+            components.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Proposal lifecycle</span>
+            <span class="chip">Voting protocol</span>
+            <span class="chip">Treasury flows</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Layers 7–9</div>
+          <div class="card-title">Constitution, infrastructure, resilience</div>
+          <p class="card-body">
+            Encode rights and constraints, define the underlying infrastructure
+            (chains, clients, APIs), and design for accessibility, security, and
+            adversarial conditions.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Rights &amp; oversight</span>
+            <span class="chip">Infra primitives</span>
+            <span class="chip">Threat models</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem; margin-top:0.8rem; color:var(--muted);">
+        Detailed description lives in <code>governance-model.md</code>.
+      </p>
+    </section>
+
+    <section id="mappings">
+      <h2 class="section-title">2. Canada mappings: federal, provincial, municipal</h2>
+      <p class="section-subtitle">
+        The 9-layer model is applied three times: to the federal system, to
+        provinces, and to municipal (city) governments. Each mapping shows what
+        can realistically be on-chain, off-chain, or hybrid.
+      </p>
+
+      <div class="card-grid cols-3">
+        <div class="card">
+          <div class="card-tag">Federal</div>
+          <div class="card-title">Parliament, Charter, national systems</div>
+          <p class="card-body">
+            House of Commons, Senate, Prime Minister and Cabinet, Elections
+            Canada, federal courts, and the Charter mapped into the protocol
+            layers.
+          </p>
+          <a class="card-link" href="canada-federal.md">View federal mapping →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Provincial</div>
+          <div class="card-title">Health, education, land, municipalities</div>
+          <p class="card-body">
+            Unicameral legislatures, Premiers, ministries, and provincial courts
+            wired into the model, with emphasis on high-touch services and
+            provincial autonomy.
+          </p>
+          <a class="card-link" href="canada-provincial.md">View provincial mapping →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Municipal</div>
+          <div class="card-title">Cities, zoning, services, daily life</div>
+          <p class="card-body">
+            Mayors, councils, zoning, permitting, local budgets, and service
+            delivery modelled as protocol flows with participatory overlays.
+          </p>
+          <a class="card-link" href="canada-municipal.md">View municipal mapping →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="visuals">
+      <h2 class="section-title">3. Visual architecture (diagram placeholders)</h2>
+      <p class="section-subtitle">
+        Below are placeholders for diagrams you can add later under an <code>assets/</code>
+        folder (SVG or PNG). They should visually summarize how each level of
+        government fits into the protocol stack.
+      </p>
+
+      <div class="card-grid cols-3">
+        <div class="card">
+          <div class="card-tag">Diagram</div>
+          <div class="card-title">Federal stack</div>
+          <div class="placeholder">
+            Federal stack diagram placeholder<br />
+            Suggested path: <code>assets/federal-stack.svg</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Diagram</div>
+          <div class="card-title">Provincial stack</div>
+          <div class="placeholder">
+            Provincial stack diagram placeholder<br />
+            Suggested path: <code>assets/provincial-stack.svg</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Diagram</div>
+          <div class="card-title">Municipal stack</div>
+          <div class="placeholder">
+            Municipal stack diagram placeholder<br />
+            Suggested path: <code>assets/municipal-stack.svg</code>
           </div>
         </div>
       </div>
     </section>
 
-    <main>
-      <section id="layers">
-        <h2 class="section-title">1. Base Governance Protocol Model (9 Layers)</h2>
-        <p class="section-subtitle">
-          A reusable abstraction for any polity: from cities to nation-states.
-          The model is expressed as nine composable layers that define who
-          participates, how decisions are made, how resources move, and how
-          rights are protected.
-        </p>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="card-tag">Layers 1–3</div>
-            <div class="card-heading">Actors, Identity &amp; Representation</div>
-            <p class="card-body">
-              Define the governance domain, attach digital identities, and wire
-              them into direct or delegated representation models (e.g., liquid
-              democracy).
-            </p>
-            <div class="chip-row">
-              <span class="chip">Actors &amp; roles</span>
-              <span class="chip">Digital ID</span>
-              <span class="chip">Delegation graphs</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-tag">Layers 4–6</div>
-            <div class="card-heading">Decision Flow &amp; Policy Execution</div>
-            <p class="card-body">
-              Model the lifecycle from idea → proposal → deliberation → vote,
-              and connect outcomes to budgets, laws, and program execution.
-            </p>
-            <div class="chip-row">
-              <span class="chip">Proposal lifecycle</span>
-              <span class="chip">Voting protocols</span>
-              <span class="chip">Treasury hooks</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-tag">Layers 7–9</div>
-            <div class="card-heading">Constitution, Infra &amp; Resilience</div>
-            <p class="card-body">
-              Encode rights, checks, and emergency powers; define the chain /
-              infra layer; and design for accessibility, recovery, and adversarial
-              conditions.
-            </p>
-            <div class="chip-row">
-              <span class="chip">Rights models</span>
-              <span class="chip">Infra primitives</span>
-              <span class="chip">Threat modeling</span>
-            </div>
+    <section id="roadmap">
+      <h2 class="section-title">4. Roadmap: from architecture to implementation</h2>
+      <p class="section-subtitle">
+        The current repo is deliberately architectural. The next steps move from
+        diagrams and mappings to concrete protocol specs and, eventually,
+        deployed systems.
+      </p>
+
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-tag">Next</div>
+          <div class="card-title">Protocol primitives</div>
+          <p class="card-body">
+            Define concrete data structures and operations: identity primitives,
+            governance actions, delegation graphs, treasury modules, and rights
+            tagging.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Governance actions</span>
+            <span class="chip">Identity schema</span>
+            <span class="chip">Treasury design</span>
           </div>
         </div>
-      </section>
 
-      <section id="mappings">
-        <h2 class="section-title">2. Canada Mappings · Federal · Provincial · Municipal</h2>
-        <p class="section-subtitle">
-          The same 9-layer model is applied three times: to Canada’s federal
-          government, provincial governments, and municipal (city) governments.
-          Each mapping shows what can live on-chain, off-chain, or in hybrid.
-        </p>
-
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="card-tag">Federal</div>
-            <div class="card-heading">Parliament, Charter &amp; National Systems</div>
-            <p class="card-body">
-              House of Commons, Senate, Prime Minister &amp; Cabinet, federal
-              courts, Elections Canada, national departments, and the Charter are
-              wired into the protocol model.
-            </p>
-            <a class="card-link" href="canada-federal.md">
-              → View federal mapping
-            </a>
-          </div>
-          <div class="card">
-            <div class="card-tag">Provincial</div>
-            <div class="card-heading">Health, Education &amp; Land</div>
-            <p class="card-body">
-              Unicameral legislatures, Premiers, ministries, and provincial
-              courts drive high-touch services like health, education, and land
-              use: ideal mid-scale protocol targets.
-            </p>
-            <a class="card-link" href="canada-provincial.md">
-              → View provincial mapping
-            </a>
-          </div>
-          <div class="card">
-            <div class="card-tag">Municipal</div>
-            <div class="card-heading">Cities, Zoning &amp; Services</div>
-            <p class="card-body">
-              Mayors, councils, zoning, permits, budgets, and local services are
-              modeled as protocol flows, with strong emphasis on participatory
-              budgeting and planning.
-            </p>
-            <a class="card-link" href="canada-municipal.md">
-              → View municipal mapping
-            </a>
+        <div class="card">
+          <div class="card-tag">Pilot</div>
+          <div class="card-title">City-scale experiments</div>
+          <p class="card-body">
+            Implement municipal pilots for participatory budgeting, zoning
+            feedback, and procurement transparency, using the 9-layer model as
+            the reference architecture.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Municipal pilots</span>
+            <span class="chip">Governance explorer</span>
+            <span class="chip">Hybrid on-chain</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section id="visuals">
-        <h2 class="section-title">3. Visual Architecture · Sample Diagrams</h2>
-        <p class="section-subtitle">
-          These cards are placeholders for actual diagrams (SVG/PNG) you can
-          add under <code>/assets</code>. They visually summarize how each
-          level of government fits into the protocol stack.
-        </p>
-
-        <div class="grid grid-3">
-          <div class="diagram-card">
-            <h3>Federal Stack</h3>
-            <!-- Replace the placeholder below with an actual image, e.g.:
-            <img src="assets/federal-stack.svg" alt="Federal governance stack diagram" style="width:100%;border-radius:12px;border:1px solid #1f2937;" />
-            -->
-            <div
-              style="
-                border-radius: 12px;
-                border: 1px dashed rgba(55,65,81,0.9);
-                padding: 0.75rem;
-                text-align: center;
-                color: #6b7280;
-                font-size: 0.75rem;
-              "
-            >
-              Federal stack diagram placeholder<br />
-              (Parliament · Charter · Departments · Elections)
-            </div>
-            <p class="diagram-caption">
-              Replace this box with an actual diagram under
-              <code>assets/federal-stack.svg</code> once you have it.
-            </p>
-          </div>
-
-          <div class="diagram-card">
-            <h3>Provincial Stack</h3>
-            <div
-              style="
-                border-radius: 12px;
-                border: 1px dashed rgba(55,65,81,0.9);
-                padding: 0.75rem;
-                text-align: center;
-                color: #6b7280;
-                font-size: 0.75rem;
-              "
-            >
-              Provincial stack diagram placeholder<br />
-              (Legislature · Premier · Ministries · Municipal Oversight)
-            </div>
-            <p class="diagram-caption">
-              Replace with e.g.
-              <code>assets/provincial-stack.svg</code>.
-            </p>
-          </div>
-
-          <div class="diagram-card">
-            <h3>Municipal Stack</h3>
-            <div
-              style="
-                border-radius: 12px;
-                border: 1px dashed rgba(55,65,81,0.9);
-                padding: 0.75rem;
-                text-align: center;
-                color: #6b7280;
-                font-size: 0.75rem;
-              "
-            >
-              Municipal stack diagram placeholder<br />
-              (Mayor · Council · Zoning · Permits · Services)
-            </div>
-            <p class="diagram-caption">
-              Replace with e.g.
-              <code>assets/municipal-stack.svg</code>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="roadmap">
-        <h2 class="section-title">4. Roadmap · From Diagrams to Code</h2>
-        <p class="section-subtitle">
-          The current repo is conceptual and architectural. The next step is to
-          turn these abstractions into concrete protocol designs and, eventually,
-          deployed governance tooling.
-        </p>
-
-        <div class="grid grid-2">
-          <div class="card">
-            <div class="card-tag">Near Term</div>
-            <div class="card-heading">Protocol Spec &amp; Data Structures</div>
-            <p class="card-body">
-              Define identity primitives, governance actions, delegation graphs,
-              and treasury modules that can be implemented on Cardano or other
-              modular chains.
-            </p>
-            <div class="chip-row">
-              <span class="chip">CID-based bill registry</span>
-              <span class="chip">On-chain referenda</span>
-              <span class="chip">Rights tagging</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-tag">Pilot Phase</div>
-            <div class="card-heading">City-level Governance Experiments</div>
-            <p class="card-body">
-              Start with municipal pilots: participatory budgeting, zoning
-              feedback loops, and transparent procurement—all wired into the
-              protocol model.
-            </p>
-            <div class="chip-row">
-              <span class="chip">Municipal ID</span>
-              <span class="chip">Ward channels</span>
-              <span class="chip">Governance explorer</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <span>Politics as Protocol · Canada · Open documentation.</span>
-      <span>
-        Start with the
-        <a href="governance-model.md">9-layer model</a>
-        or jump into the
-        <a href="canada-federal.md">federal mapping</a>.
-      </span>
-    </footer>
-  </div>
+  <footer>
+    <span>Politics as Protocol – Canada Governance Stack.</span>
+    <span>
+      Start with <a href="governance-model.md">governance-model.md</a> or jump into
+      <a href="canada-federal.md">canada-federal.md</a>.
+    </span>
+  </footer>
 </body>
 </html>
