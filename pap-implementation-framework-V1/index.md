@@ -1,4 +1,4 @@
-Politics as Protocol Implementation Framework: Human-Centric Governance Model
+# Politics as Protocol Implementation Framework: Human-Centric Governance Model
 
 ## Core Principles
 
